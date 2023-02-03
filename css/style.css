@@ -1,0 +1,138 @@
+:root{
+    --primary : #b6895b;
+    --bg : #010101;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Poppins',sans-serif;
+    background-color: var(--bg);
+    color: #fff;
+}
+
+/* navbar */
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4rem 7%;
+    background-color: rgba(1, 1, 1,0.8);
+    border-bottom: 1px solid #88623b;
+    position: fixed;
+    right: 0;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    color: white;
+}
+
+.navbar .navbar-logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-style: italic;
+    color: white;
+    padding-bottom: 0.5rem;
+}
+.navbar .navbar-logo span {
+    color:  var(--primary);
+}
+
+.navbar .navbar-nav a{
+    display: inline-block;
+    font-size: 1rem;
+    margin: 0 1rem;
+    color: white;
+}
+.navbar .navbar-nav a:hover{
+    color: var(--primary);
+}
+.navbar .navbar-nav a::after{
+    content: '';
+    display: block;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.1rem solid var(--primary);
+    transform: scaleX(0);
+}
+.navbar .navbar-nav a:hover::after{
+    transform: scaleX(0.5);
+    transition: 0.2s linear;
+}
+.navbar .navbar-extra a {
+    margin: 0 0.5rem;
+    color: white;
+}
+.navbar .navbar-extra a:hover {
+    color: var(--primary);
+    transition: 0.2s;
+    color: var(--primary);
+}
+#menu{
+    display: none;
+}
+
+
+
+
+
+/* media query */
+/* laptop */
+@media(max-width:1366px){
+    html{
+        font-size: 75%;
+    }
+}
+/* tablet */
+@media(max-width:835px){
+    html{
+        font-size: 62.5%;
+    }
+    #menu{
+        display: inline-block;
+    }
+    .navbar .navbar-nav{
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background-color: white;
+        width: 38rem;
+        height: 100vh;
+    }
+    .navbar .navbar-nav.slide{
+        right: 0;
+        transition: 0.5s linear;
+    }
+    .navbar .navbar-nav a{
+        color: var(--bg);
+        margin: 1.5rem;
+        padding: 0.5rem;
+        display: block;
+        font-size: 2rem;
+    }
+    .navbar .navbar-nav a::after{
+        transform-origin: 0 0;
+    }
+    .navbar .navbar-nav a:hover::after{
+        transform: scaleX(0.5);
+        transition: 0.5s;
+    }
+}
+/* mobile */
+@media(max-width:415px){
+    html{
+        font-size: 55%;
+    }
+    #search{
+        display: none;
+    }
+    #shopping-cart{
+        display: none;
+    }
+}
