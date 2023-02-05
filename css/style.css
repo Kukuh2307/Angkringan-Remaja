@@ -11,12 +11,14 @@
     border: none;
     text-decoration: none;
 }
+html{
+    scroll-behavior: smooth;
+}
 
 body {
     font-family: 'Poppins',sans-serif;
     background-color: var(--bg);
     color: #fff;
-    height: 500rem;
 }
 
 /* navbar */
@@ -248,7 +250,37 @@ body {
     background: none;
     padding: 2rem;
 }
-
+/* footer */
+footer{
+    background-color: var(--primary);
+    text-align: center;
+    margin-top: 3rem;
+    padding: 1rem 0 3rem;
+}
+footer .socials{
+    padding: 1rem 0;
+}
+footer .socials a{
+    color: #fff;
+    margin: 1rem;
+}
+footer .socials a:hover,footer .links{
+    color: var(--bg);
+}
+footer .links{
+    margin-bottom: 1.4rem;
+}
+footer .links a{
+    color: #fff;
+    padding: 0.7rem 1rem;
+}
+footer .credits{
+    font-size: 0.8rem;
+}
+footer .credits a{
+    color: var(--bg);
+    font-weight: 700;
+}
 
 
 
